@@ -5,7 +5,7 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
 
  - Using <i>gtfs-builder.py</i>, run the following methods to pull the route database from Plexus MongoDB store.
 
-<b>build_gtfs([db_connection], [directory_folder])</b>
+<i>build_gtfs([db_connection], [directory_folder])</i>
  - calls <b>builders([to_directory])</b>, creating GTFS txt files in directory folder.
  
             -  build_agency(db,to_directory, "agency.txt")
@@ -23,7 +23,9 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
   - Using <i>save-as.py</i>, run the following methods to convert database collection from Plexus MongoDB store to either GeoJSON or Shapefile
   
   <i>save_as_geojson([filename], [geojson_object], test=True)</i>
+  - exports as GeoJSON file
   <i>save_as_shapefile([geojson_file])</i>
+  - converts GeoJSON and exports it to Shapefile
   
   For Revisions: 
   - Directly get geojson object inside save_as_geojson. 
