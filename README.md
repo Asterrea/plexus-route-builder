@@ -18,9 +18,8 @@ Builds GTFS files and GeoJSON file from the old mongoDB database of Plexus found
             -  build_stops(db,to_directory, "stops.txt")
             -  build_trips(db,to_directory, "trips.txt")
 
-<b>initialize_default_field([db_connection])</b>
-  - initializes restore from routes.bson if routes table in Mongo Database is empty
-  
-<b>insert_to_db([db_connection], [modelname])</b>
-  - initializes remaining data from GTFS text files to MongoDB database.
-  - stops, calendar, trips, frequencies, stop_times (CLEAN)
+<b>Versions</b>
+ - Version 1.0.0 08/14/17
+   - Manual cleaning. Unclean Version
+ - Version 2.0.0 09/21/17
+   - Cleaned version. On road 
