@@ -24,6 +24,7 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
   
   <i>save_as_geojson([filename], [geojson_object], test=True)</i>
   - exports as GeoJSON file
+  
   <i>save_as_shapefile([geojson_file])</i>
   - converts GeoJSON and exports it to Shapefile
   
