@@ -3,7 +3,7 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
 
 <b>Building from Exsiting MongoDB Database</b>
 
- - Using <i>gtfs-builder.py</i>, run the following methods to pull the old route database from Plexus MongoDB store.
+ - Using <i>gtfs-builder.py</i>, run the following methods to pull the route database from Plexus MongoDB store.
 
 <b>build_gtfs([db_connection], [directory_folder])</b>
  - calls <b>builders([to_directory])</b>, creating GTFS txt files in directory folder.
@@ -20,6 +20,6 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
 
 <b>Versions</b>
  - Version 1.0.0 (08/14/17)
-   - Manual cleaning. 60% off road per route
+   - Manual cleaning. 60 percent off road per route
  - Version 2.0.0 (09/21/17)
-   - Cleaned version. 100% on road
+   - Cleaned version. 100 percent on road
