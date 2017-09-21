@@ -1,7 +1,7 @@
 # plexus-route-builder
 Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB database of Plexus found in thesis-plexus.herokuapp.com
 
-<b>Building from Exsiting MongoDB Database</b>
+<b>Building GTFS from Exsiting MongoDB Database</b>
 
  - Using <i>gtfs-builder.py</i>, run the following methods to pull the route database from Plexus MongoDB store.
 
@@ -17,6 +17,17 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
             -  build_stop_times(db,to_directory, "stop_times.txt")
             -  build_stops(db,to_directory, "stops.txt")
             -  build_trips(db,to_directory, "trips.txt")
+ 
+ <b>Saving Options from Exsiting MongoDB Database</b>
+ 
+  - Using <i>save-as.py</i>, run the following methods to convert database collection from Plexus MongoDB store to either GeoJSON or Shapefile
+  
+  <i>save_as_geojson([filename], [geojson_object], test=True)</i>
+  <i>save_as_shapefile([geojson_file])</i>
+  
+  For Revisions: 
+  - Directly get geojson object inside save_as_geojson. 
+  - Allow user to save/convert database contents as shapefile without supplying an exisiting geojson file.
 
 <b>Versions</b>
  - Version 1.0.0 (08/14/17)
