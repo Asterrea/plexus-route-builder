@@ -1,5 +1,5 @@
 # plexus-route-builder
-Builds GTFS files and GeoJSON file from the old mongoDB database of Plexus found in thesis-plexus.herokuapp.com
+Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB database of Plexus found in thesis-plexus.herokuapp.com
 
 <b>Building from Exsiting MongoDB Database</b>
 
