@@ -19,7 +19,7 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
             -  build_trips(db,to_directory, "trips.txt")
 
 <b>Versions</b>
- - Version 1.0.0 08/14/17
+ - Version 1.0.0 (08/14/17)
    - Manual cleaning. 60% off road per route
- - Version 2.0.0 09/21/17
-   - Cleaned version. 100% on road per route
+ - Version 2.0.0 (09/21/17)
+   - Cleaned version. 100% on road
