@@ -37,3 +37,5 @@ Builds GTFS files and GeoJSON file of Metro Manila, Philippines from the mongoDB
    - Manual cleaning. 60 percent off road per route
  - Version 2.0.0 (09/21/17)
    - Cleaned version. 100 percent on road
+ - Version 2.1.0 (10/7/2017)
+   - Recalibrated version. Instead of Origin and Destination, Middle waypoint is considered. 100 percent on road.
