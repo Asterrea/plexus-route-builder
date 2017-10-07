@@ -1,2 +1,4 @@
+09212017:
+Clean routes using OSRM API (deprecated). Using origin and destination driving profile only.
 1072017:
-Clean routes using mapbox directions api. Considering middle waypoint.
+Clean routes using Mapbox Directions API. Considering middle waypoint.
