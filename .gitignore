@@ -1,3 +1,13 @@
 /files
-routes.geojson
-geojson-folder
+/geojson-folder
+/gtfs-plexus
+/original_data
+
+route_cleaning_geojson.py
+route_cleaning_json.py
+
+routes.json
+routes-updated.geojson
+routes-new-raw.geojson
+
+

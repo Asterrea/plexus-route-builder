@@ -73,9 +73,9 @@ def check_if_path_exists(filepath):
             if exc.errno != os.errno.EEXIST:
                 raise
 
-def align_route(rlinestring_shp):
-    http://router.project-osrm.org/table/v1/driving/120.9834301,14.60350785;120.9924853,14.60077731;121.005038, 14.60173248;
-    121.017, 14.6042; 121.026, 14.6105; 121.034, 14.6136; 121.043, 14.6185; 121.053, 14.6227; 121.065, 14.628; 121.073, 14.631; 121.086, 14.6223
+#def align_route(rlinestring_shp):
+#    http://router.project-osrm.org/table/v1/driving/120.9834301,14.60350785;120.9924853,14.60077731;121.005038, 14.60173248;
+#    121.017, 14.6042; 121.026, 14.6105; 121.034, 14.6136; 121.043, 14.6185; 121.053, 14.6227; 121.065, 14.628; 121.073, 14.631; 121.086, 14.6223
 
     #kgcxAoqlaVLnBbAiK~Pee@oFiI`EuUsL}wBai@{k@}Ri{@kh@khAiJs^gg@arA}Dg]{Xyu@pDuKdy@sp@
     #http://router.project-osrm.org/route/v1/driving/120.9834301,14.60350785;121.086,14.6223

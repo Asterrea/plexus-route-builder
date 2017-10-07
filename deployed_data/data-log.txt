@@ -1,0 +1,2 @@
+1072017:
+Clean routes using mapbox directions api. Considering middle waypoint.

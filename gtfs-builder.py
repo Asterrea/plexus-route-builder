@@ -328,7 +328,7 @@ def build_routes(db,to_directory, filename):
             try:
                 route["properties"]["agency_id"]
             except KeyError:
-                print(route["route_id"])
+                print("Error at route properties!" + str(route["route_id"]))
                 continue;    
             writer.writerow({"route_id":strip_non_asciii(route["route_id"]),"agency_id":strip_non_asciii(route["properties"]["agency_id"]),
                              "route_short_name": strip_non_asciii(route["properties"]["route_name"]),"route_long_name":strip_non_asciii(route["properties"]["route_long"]),
@@ -345,6 +345,7 @@ def build_shapes(db,to_directory, filename):
         
         routes = db.routes.find()
         for route in routes:
+            print("SHAPE FOR:" + str(route["route_id"]))
             count=0
             for item in route["geometry"]["coordinates"]:
                 count += 1
@@ -361,6 +362,7 @@ def build_stops(db,to_directory, filename):
         
         stops = db.stops.find()
         for stop in stops:
+            print("STOP:" + str(strip_non_asciii["stop_id"]))
             writer.writerow({"stop_id":strip_non_asciii(stop["stop_id"]),"stop_code":strip_non_asciii(stop["properties"]["stop_code"]),"stop_name":strip_non_asciii(stop["properties"]["stop_name"]),
                              "stop_desc":strip_non_asciii(stop["properties"]["stop_desc"]),"stop_lat":strip_non_asciii(stop["geometry"]["coordinates"][1]),"stop_lon":strip_non_asciii(stop["geometry"]["coordinates"][0]),
                              "zone_id":strip_non_asciii(stop["properties"]["zone_id"]),"stop_url":strip_non_asciii(stop["properties"]["stop_url"]),"location_type":strip_non_asciii(stop["properties"]["location_type"]),
@@ -378,6 +380,7 @@ def build_stop_times(db,to_directory, filename):
         trips = db.trips.find()
         for trip in trips:
             for stop_time in trip["stop_times"]:
+                print("STOP TIME:" + str(stop_time["seq"]))
                 writer.writerow({"trip_id":trip["trip_id"],"stop_sequence": stop_time["seq"],"stop_id": stop_time["stop_id"],
                                  "arrival_time":stop_time["arrival_time"],"departure_time":stop_time["arrival_time"],
                                  "stop_headsign":stop_time["stop_headsign"],"pickup_type":stop_time["pickup_type"],
@@ -394,6 +397,7 @@ def build_trips(db,to_directory, filename):
 
         trips = db.trips.find()
         for trip in trips:
+            print("TRIP:" + str(trip["properties"]["route_id"]))
             services = db.calendar.find({"_id":trip["properties"]["service_id"]})
             for service in services:
                 service_id = service["service_id"]
@@ -451,4 +455,4 @@ print("Connected to: %s") % (db.get_collection)
 #insert_to_db(db,"frequencies")
 #insert_to_db(db,"stop_times")
 
-build_gtfs(db,"gtfs-plexus")
+build_gtfs(db,"gtfs-plexus-new")
